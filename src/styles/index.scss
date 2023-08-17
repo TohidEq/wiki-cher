@@ -568,6 +568,11 @@ video {
   }
 }
 
+.py-4 {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
 @import "./base.scss";
 
 @import "./home.scss";
@@ -575,3 +580,5 @@ video {
 @import "./navigation.scss";
 
 @import "./searchResult.scss";
+
+@import "./card.scss";

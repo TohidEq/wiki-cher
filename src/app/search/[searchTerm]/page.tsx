@@ -1,3 +1,4 @@
+import Card from "@/components/Card";
 import getWikiResult from "@/lib/getWikiResult";
 import { useSearchParams } from "next/navigation";
 import React from "react";
@@ -36,18 +37,22 @@ export default async function SearchResult(props: Params) {
   const data = await wikiResult;
   const results: Result[] | undefined = data?.query?.pages;
 
+  const displayTerm = props.params.searchTerm.replaceAll("%20", " ");
+
   const content = (
     <main className="search-result">
+      <h2 className="msg-text py-4">
+        Search Result for:
+        <span> {displayTerm} </span>
+      </h2>
+      <div className="results"></div>
       {results ? (
-        Object.values(results).map((result) => (
-          <p className="">
-            {result.title}
-            <br />
-            <br />
-          </p>
-        ))
+        Object.values(results).map((result) => <Card result={result} />)
       ) : (
-        <h2 className="msg-text">{`${props.params.searchTerm} Not Found 🙁`}</h2>
+        <h2 className="msg-text py-4">
+          <span>{`${props.params.searchTerm} `}</span>
+          Not Found 🙁
+        </h2>
       )}
     </main>
   );

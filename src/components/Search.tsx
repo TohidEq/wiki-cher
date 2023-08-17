@@ -18,6 +18,7 @@ function Search() {
     <div className="search">
       <form action="" onSubmit={handleSearch}>
         <input
+          spellCheck="false"
           type="text"
           className=""
           ref={search}

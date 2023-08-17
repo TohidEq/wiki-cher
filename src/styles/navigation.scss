@@ -58,6 +58,14 @@ nav.navigation {
 
           border-y-2 border-y-transparent
           focus-visible:border-b-yellow-500;
+
+          ::spelling-error {
+            text-decoration: underline red;
+          }
+
+          ::marker {
+            background-color: red;
+          }
         }
         button {
           @apply absolute
