@@ -3,7 +3,7 @@ export default async function getWikiResult(searchTerm: string) {
     action: "query",
     generator: "search",
     gsrsearch: searchTerm,
-    gsrlimit: "20",
+    gsrlimit: "50",
     prop: "pageimages|extracts",
     exchars: "100",
     exintro: "true",

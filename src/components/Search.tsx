@@ -3,6 +3,8 @@
 import { useRouter } from "next/navigation";
 import { FormEvent, useRef } from "react";
 
+import { BiSearchAlt } from "react-icons/bi";
+
 function Search() {
   const router = useRouter();
 
@@ -13,7 +15,7 @@ function Search() {
   };
 
   return (
-    <div className="pb-2 search">
+    <div className="search">
       <form action="" onSubmit={handleSearch}>
         <input
           type="text"
@@ -22,8 +24,8 @@ function Search() {
           required
           placeholder="Your Question..."
         />
-        <button type="submit" className="text-yellow-500 hover:opacity-50">
-          
+        <button type="submit" className="">
+          <BiSearchAlt />
         </button>
       </form>
     </div>

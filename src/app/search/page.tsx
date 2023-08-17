@@ -3,7 +3,7 @@ import getWikiResult from "@/lib/getWikiResult";
 import { useSearchParams } from "next/navigation";
 import React from "react";
 
-export default async function SearchResult(props: Params) {
+export default async function SearchResult() {
   const content = (
     <main className="search-result">
       <h2 className="msg-text">{`What Are You Doing Here? 😃`}</h2>

@@ -4,7 +4,10 @@ import Search from "./Search";
 function Navigation() {
   return (
     <nav className={"navigation"}>
-      <div className={""}>
+      <div className={"container"}>
+        <Link href={"/"} className="title">
+          <span>W</span>iki<span>C</span>her
+        </Link>
         <Search />
       </div>
     </nav>

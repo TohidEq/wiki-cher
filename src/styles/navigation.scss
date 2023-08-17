@@ -1,3 +1,90 @@
-nav.navitgaion {
-  @apply bg-red-500;
+nav.navigation {
+  @apply py-4;
+
+  .container {
+    @apply mx-auto
+    
+    sm:px-16
+
+    sm:text-left
+    flex flex-wrap sm:flex-nowrap
+    justify-between;
+
+    .title {
+      @apply font-bold
+      mb-3 sm:mb-0
+      text-center
+      w-full sm:w-fit
+      text-3xl
+      sm:text-4xl
+      md:text-5xl;
+
+      span {
+        @apply text-yellow-500;
+      }
+    }
+
+    .search {
+      @apply mx-auto
+      sm:mx-0
+      sm:grid
+      sm:content-center;
+      form {
+        @apply mx-auto sm:mx-0 relative
+        h-fit;
+        input {
+          @apply min-w-0
+
+          placeholder:text-white/50
+          h-9
+          sm:h-10
+          md:h-11
+
+
+          w-[250px]
+          sm:w-[300px]
+          md:w-[350px]
+          lg:w-[450px]
+          
+          py-[2px] px-2 rounded
+
+          text-xl
+          sm:text-2xl
+          md:text-3xl
+          
+          bg-white/20
+          outline-none
+          transition-all duration-150
+
+          border-y-2 border-y-transparent
+          focus-visible:border-b-yellow-500;
+        }
+        button {
+          @apply absolute
+          bg-yellow-500 
+          rounded-full
+
+          right-0
+          translate-x-1/2
+
+          m-0
+          w-9 h-9
+          sm:w-10 sm:h-10
+          md:w-11 md:h-11
+          transition-all duration-150
+
+          scale-110
+          hover:scale-125 active:bg-white active:text-yellow-500
+          active:scale-105;
+
+          svg {
+            @apply m-1
+            w-7 h-7
+            sm:w-8 sm:h-8
+            md:w-9 md:h-9;
+          }
+        }
+      }
+    }
+  }
 }
