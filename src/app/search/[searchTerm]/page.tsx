@@ -46,7 +46,9 @@ export default async function SearchResult(props: Params) {
       </h2>
       <div className="results"></div>
       {results ? (
-        Object.values(results).map((result) => <Card result={result} />)
+        Object.values(results).map((result) => (
+          <Card key={result.pageid} result={result} />
+        ))
       ) : (
         <h2 className="msg-text py-4">
           <span>{`${props.params.searchTerm} `}</span>
