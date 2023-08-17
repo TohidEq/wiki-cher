@@ -1,4 +1,3 @@
-"use client";
 import getWikiResult from "@/lib/getWikiResult";
 import { useSearchParams } from "next/navigation";
 import React from "react";
@@ -8,6 +7,26 @@ type Params = {
     searchTerm: string;
   };
 };
+
+export async function generateMetadata(props: Params) {
+  const wikiResult: Promise<SearchResult> = getWikiResult(
+    props.params.searchTerm
+  );
+
+  const data = await wikiResult;
+  const results: Result[] | undefined = data?.query?.pages;
+
+  const displayTerm = props.params.searchTerm.replaceAll("%20", " ");
+
+  if (!results) {
+    return {
+      title: `${displayTerm} Not Found`,
+    };
+  }
+  return {
+    title: `Search Results for ${displayTerm}`,
+  };
+}
 
 export default async function SearchResult(props: Params) {
   const wikiResult: Promise<SearchResult> = getWikiResult(

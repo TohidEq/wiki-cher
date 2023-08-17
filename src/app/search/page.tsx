@@ -1,9 +1,10 @@
-"use client";
-import getWikiResult from "@/lib/getWikiResult";
-import { useSearchParams } from "next/navigation";
-import React from "react";
+export function generateMetadata() {
+  return {
+    title: `How R U? :)`,
+  };
+}
 
-export default async function SearchResult() {
+export default function SearchResult() {
   const content = (
     <main className="search-result">
       <h2 className="msg-text">{`What Are You Doing Here? 😃`}</h2>
