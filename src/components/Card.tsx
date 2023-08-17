@@ -1,4 +1,3 @@
-import Image from "next/image";
 import Link from "next/link";
 
 import { BsLink45Deg } from "react-icons/bs";
@@ -26,7 +25,7 @@ function Card(props: Props) {
         className="card-items"
       >
         <div className="card-img">
-          <Image
+          <img
             src={props.result.thumbnail.source}
             alt={props.result.title}
             width={props.result.thumbnail.width}
