@@ -1,3 +1,50 @@
 .search-result {
   @apply container mx-auto text-center;
+
+  .scroll-top {
+    @apply fixed 
+    top-0
+    left-1/2
+    translate-y-[100vh];
+
+    .scroll-btn {
+      @apply absolute rounded-t-full
+      transition-all duration-150
+      -translate-x-1/2
+      hover:scale-110 active:scale-105;
+
+      &.hidden-true {
+        @apply -translate-y-0;
+      }
+      &.hidden-false {
+        @apply -translate-y-full;
+      }
+
+      svg {
+        @apply relative
+        w-[40px] h-[40px]
+        md:w-[60px] md:h-[60px];
+        path {
+          @apply absolute 
+          translate-y-1
+          md:translate-y-[6px];
+        }
+      }
+
+      &:before {
+        @apply block absolute content-['']
+        border-[40px]
+        md:border-[60px]
+        border-transparent
+
+        opacity-60
+        border-b-yellow-500
+        bottom-0 
+        -left-1/2
+        transition-all duration-150
+        hover:opacity-80
+        active:opacity-100;
+      }
+    }
+  }
 }

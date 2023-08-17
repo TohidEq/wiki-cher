@@ -1,7 +1,6 @@
 import Card from "@/components/Card";
+import Scroll from "@/components/Scroll";
 import getWikiResult from "@/lib/getWikiResult";
-import { useSearchParams } from "next/navigation";
-import React from "react";
 
 type Params = {
   params: {
@@ -40,7 +39,7 @@ export default async function SearchResult(props: Params) {
   const displayTerm = props.params.searchTerm.replaceAll("%20", " ");
 
   const content = (
-    <main className="search-result">
+    <main className="search-result pb-28">
       <h2 className="msg-text py-4">
         Search Result for:
         <span> {displayTerm} </span>
@@ -54,6 +53,8 @@ export default async function SearchResult(props: Params) {
           Not Found 🙁
         </h2>
       )}
+
+      <Scroll />
     </main>
   );
 

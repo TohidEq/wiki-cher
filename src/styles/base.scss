@@ -1,11 +1,16 @@
 @import url("https://fonts.googleapis.com/css2?family=Reem+Kufi:wght@400;500;600;700&display=swap");
 
+body {
+  overflow: overlay;
+}
+
 body,
 * {
   font-family: "Reem Kufi", sans-serif;
 }
 .app {
-  @apply min-h-screen text-white;
+  @apply min-h-screen text-white relative;
+
   background: linear-gradient(to right, rgb(64, 58, 62), rgb(190, 88, 105));
 }
 
@@ -25,4 +30,24 @@ h3.msg-text {
   span {
     @apply text-yellow-500;
   }
+}
+
+/* ==ScroolBar== */
+/* width */
+::-webkit-scrollbar {
+  @apply block absolute left-0;
+  width: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background-color: #353033;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  @apply absolute transition-all duration-150
+  rounded
+  bg-yellow-500
+  hover:bg-yellow-600;
 }

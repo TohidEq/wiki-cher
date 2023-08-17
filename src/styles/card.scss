@@ -1,7 +1,7 @@
 .card {
   @apply mx-auto
   mt-4
-  w-[250px]
+  max-w-[250px] sm:max-w-none
   sm:w-[400px]
   md:w-[600px]
   lg:w-[800px]

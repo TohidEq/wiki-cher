@@ -568,9 +568,21 @@ video {
   }
 }
 
+.hidden {
+  display: none;
+}
+
 .py-4 {
   padding-top: 1rem;
   padding-bottom: 1rem;
+}
+
+.pb-11 {
+  padding-bottom: 2.75rem;
+}
+
+.pb-28 {
+  padding-bottom: 7rem;
 }
 
 @import "./base.scss";
